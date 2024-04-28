@@ -30,8 +30,7 @@ public class MessageListServlet extends ChatServlet {
 
         for (int i=0; i<=messages.size()-1; i++) {
             ChatMessage aMessage = messages.get(i);
-            if ((Calendar.getInstance().getTimeInMillis()-messages.get(i).getTimestamp())/1000 <= messages.get(i).getSek())
-                pw.println("<div><strong>" + aMessage.getAuthor().getName() + "</strong>: " + aMessage.getMessage() + "</div>");
+            pw.println("<div><strong>" + aMessage.getAuthor().getName() + "</strong>: " + aMessage.getMessage() + "</div>");
 
         }
 
